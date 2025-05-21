@@ -1,0 +1,22 @@
+# .github/workflows/publish.yml
+
+name: Publish
+
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.2.12
+      # TODO: Check that version and tag are consistent
+      - run: deno publish

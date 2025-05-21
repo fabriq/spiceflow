@@ -1,0 +1,102 @@
+export const snapshot = {};
+
+snapshot[`can encode superjson types 1`] = `
+{
+  items: [
+    {
+      bigint: 123n,
+      date: 2025-01-20T18:01:57.852Z,
+      map: Map(1) {
+        "a" => 1,
+      },
+      set: Set(3) {
+        1,
+        2,
+        3,
+      },
+    },
+    {
+      bigint: 123n,
+      date: 2025-01-20T18:01:57.852Z,
+      map: Map(1) {
+        "a" => 1,
+      },
+      set: Set(3) {
+        1,
+        2,
+        3,
+      },
+    },
+  ],
+}
+`;
+
+snapshot[`can encode superjson types 2`] = `
+{
+  __superjsonMeta: {
+    referentialEqualities: {
+      "items.0": [
+        "items.1",
+      ],
+    },
+    values: {
+      "items.0.bigint": [
+        "bigint",
+      ],
+      "items.0.date": [
+        "Date",
+      ],
+      "items.0.map": [
+        "map",
+      ],
+      "items.0.set": [
+        "set",
+      ],
+      "items.1.bigint": [
+        "bigint",
+      ],
+      "items.1.date": [
+        "Date",
+      ],
+      "items.1.map": [
+        "map",
+      ],
+      "items.1.set": [
+        "set",
+      ],
+    },
+  },
+  items: [
+    {
+      bigint: "123",
+      date: "2025-01-20T18:01:57.852Z",
+      map: [
+        [
+          "a",
+          1,
+        ],
+      ],
+      set: [
+        1,
+        2,
+        3,
+      ],
+    },
+    {
+      bigint: "123",
+      date: "2025-01-20T18:01:57.852Z",
+      map: [
+        [
+          "a",
+          1,
+        ],
+      ],
+      set: [
+        1,
+        2,
+        3,
+      ],
+    },
+  ],
+}
+`;

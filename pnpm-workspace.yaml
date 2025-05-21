@@ -1,4 +1,0 @@
-packages:
-  - ./*
-  - ./experiments/*
-neverBuiltDependencies: []

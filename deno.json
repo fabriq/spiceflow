@@ -1,0 +1,36 @@
+{
+  "name": "@fabriq/spiceflow",
+  "version": "0.1.0",
+  "exports": {
+    ".": "./src/mod.ts",
+    "./cors": "./src/cors.ts",
+    "./client": "./src/client/mod.ts",
+    "./openapi": "./src/openapi.ts",
+    "./types": "./src/types.ts"
+  },
+  "imports": {
+    "@medley/router": "npm:@medley/router@^0.2.1",
+    "@standard-schema/spec": "npm:@standard-schema/spec@^1.0.0",
+    "@std/expect": "jsr:@std/expect@^1.0.16",
+    "@std/testing": "jsr:@std/testing@^1.0.12",
+    "eventsource-parser": "npm:eventsource-parser@^3.0.2",
+    "eventsource-parser/stream": "npm:eventsource-parser@^3.0.2/stream",
+    "lodash.clonedeep": "npm:lodash.clonedeep@^4.5.0",
+    "openapi-types": "npm:openapi-types@^12.1.3",
+    "superjson": "npm:superjson@^2.2.2",
+    "zod": "npm:zod@3.25.13",
+    "zod-to-json-schema": "npm:zod-to-json-schema@^3.24.5"
+  },
+  "lint": {
+    "rules": {
+      "exclude": [
+        "no-explicit-any",
+        "no-this-alias",
+        "require-await",
+        "require-yield",
+        "ban-ts-comment",
+        "ban-types"
+      ]
+    }
+  }
+}
